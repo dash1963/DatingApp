@@ -18,10 +18,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MemberDetailResolver  } from '../app/_resolvers/member-detail.resolver';
 import { MemberListResolver } from '../app/_resolvers/member-list.resolver';
+import {  MemberEditResolver } from '../app/_resolvers/member-edit.resolver';
+import { PrevetUnsavedChanges } from '../app/_guards/prevet-unsaved-changes.guard';
+
 
 import { MemberListComponent } from '../app/members/member-list/member-list.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+import { MemberEditComponent } from './members/member-edit/member-edit.component';
 
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -46,7 +50,8 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
       MessagesComponent,
       HomeComponent,
       MemberCardComponent,
-      MemberDetailComponent
+      MemberDetailComponent,
+      MemberEditComponent
    ],
   imports: [
     BrowserModule,
@@ -71,7 +76,9 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
     AuthService,
     ErrorInterceptorProvider,
     MemberDetailResolver,
-    MemberListResolver
+    MemberListResolver,
+    MemberEditResolver,
+    PrevetUnsavedChanges 
   ],
   bootstrap: [AppComponent]
 })

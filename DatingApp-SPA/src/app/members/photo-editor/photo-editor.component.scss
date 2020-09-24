@@ -1,0 +1,33 @@
+.img.img-thumbnail {
+
+    height: 100px;
+    min-width: 100px !important;
+    margin-bottom:  2px;
+}
+
+@keyframes blink { 
+    50% { border-color: #ff0000; } 
+}
+
+.nv-file-over {
+    border: dotted 3px lightgrey; ;
+    animation: blink .5s step-end infinite alternate;
+
+}
+
+input[type=file] {
+    color: transparent;
+}
+
+// .my-drop-zone { 
+//     border: dotted 3px red;
+//     animation: blink .5s step-end infinite alternate;
+// }
+
+@keyframes blinka { 
+    50% { color: #0c0b0b; } 
+}
+
+.blinker {
+    animation: blinka .6s step-end infinite alternate;
+}

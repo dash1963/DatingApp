@@ -4,7 +4,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { BsDropdownModule} from 'ngx-bootstrap/dropdown';
-import { FormsModule } from '@angular/forms';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
 import { FileUploadModule } from 'ng2-file-upload';
@@ -39,6 +40,7 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 
 
 
+
 // export function tokenGetter() {
 //   return  localStorage.getItem('token');
 // }
@@ -62,11 +64,12 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     TabsModule.forRoot(),
     BsDropdownModule.forRoot(),
     RouterModule.forRoot(appRoutes),
-
+    BsDatepickerModule.forRoot(),
     NgxGalleryModule,
     FileUploadModule,
 

@@ -39,6 +39,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { appRoutes } from './routes';
 
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { ListsResolver } from './_resolvers/lists.resolver';
 
 
 
@@ -92,6 +93,7 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
     MemberDetailResolver,
     MemberListResolver,
     MemberEditResolver,
+    ListsResolver,
     PrevetUnsavedChanges 
   ],
   bootstrap: [AppComponent]

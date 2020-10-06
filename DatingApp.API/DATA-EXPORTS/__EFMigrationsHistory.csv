@@ -1,0 +1,7 @@
+MigrationId,ProductVersion
+20200917052514_InitialCreate,3.0.0
+20200918011248_AddedUserEntity,3.0.0
+20200921074209_ExtendedUserClass,3.0.0
+20200923051730_AddedPublicId,3.0.0
+20200927113538_AddedLikeEntity,3.0.0
+20200927183822_MessageEntityAdded,3.0.0

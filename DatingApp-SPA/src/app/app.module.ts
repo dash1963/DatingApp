@@ -11,7 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
 import { FileUploadModule } from 'ng2-file-upload';
-import { TimeagoModule } from 'ngx-timeago';
+import { TimeagoModule, TimeagoPipe } from 'ngx-timeago';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
@@ -24,15 +24,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MemberDetailResolver  } from '../app/_resolvers/member-detail.resolver';
 import { MemberListResolver } from '../app/_resolvers/member-list.resolver';
 import {  MemberEditResolver } from '../app/_resolvers/member-edit.resolver';
-import { PrevetUnsavedChanges } from '../app/_guards/prevet-unsaved-changes.guard';
+import { PreventUnsavedChanges } from './_guards/prevent-unsaved-changes.guard';
 
 
 import { MemberListComponent } from '../app/members/member-list/member-list.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
-import {  PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
-
+import { PhotoEditorComponent } from './members/photo-editor/photo-editor.component';
+import { MemberMessagesComponent } from './members/member-messages/member-messages.component';
 
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -40,7 +40,7 @@ import { appRoutes } from './routes';
 
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { ListsResolver } from './_resolvers/lists.resolver';
-
+import { MessagesResolver } from './_resolvers/messages.resolver';
 
 
 
@@ -61,7 +61,9 @@ import { ListsResolver } from './_resolvers/lists.resolver';
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      PhotoEditorComponent
+      PhotoEditorComponent,
+      
+      MemberMessagesComponent
    ],
   imports: [
     BrowserModule,
@@ -94,7 +96,8 @@ import { ListsResolver } from './_resolvers/lists.resolver';
     MemberListResolver,
     MemberEditResolver,
     ListsResolver,
-    PrevetUnsavedChanges 
+    PreventUnsavedChanges,
+    MessagesResolver, 
   ],
   bootstrap: [AppComponent]
 })
